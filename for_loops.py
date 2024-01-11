@@ -28,3 +28,11 @@ books_prices = [product["price"] for product in products if product["category"] 
 avrg = sum(books_prices) / len(books_prices) if books_prices else 0
 print(avrg)
 # %%
+# *args like siahchale get everything inside itself.
+def avrg(*args):
+    total = 0
+    for num in args:
+        total += num
+    return total / len(args)
+print(avrg(2,3,5,6))
+# %%
